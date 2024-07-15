@@ -10,7 +10,7 @@ class AppTheme {
       highlightColor: Colors.transparent,
       splashColor: Colors.transparent,
       appBarTheme: lightAppBar(),
-      fontFamily: 'DMSans',
+      fontFamily: 'Lora',
       floatingActionButtonTheme: const FloatingActionButtonThemeData(),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(

@@ -63,10 +63,9 @@ flutter:
   assets:
     - lib/resources/images/
   fonts:
-    - family: DMSans
+    - family: Lora
       fonts:
-        - asset: assets/fonts/DMSans-Light.ttf
-        - asset: assets/fonts/DMSans-Regular.ttf
-        - asset: assets/fonts/DMSans-Medium.ttf
-        - asset: assets/fonts/DMSans-SemiBold.ttf
-        - asset: assets/fonts/DMSans-Bold.ttf
+        - asset: assets/fonts/Lora-Regular.ttf
+        - asset: assets/fonts/Lora-Medium.ttf
+        - asset: assets/fonts/Lora-SemiBold.ttf
+        - asset: assets/fonts/Lora-Bold.ttf
