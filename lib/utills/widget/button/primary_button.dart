@@ -35,7 +35,7 @@ class PrimaryButtonWidget extends StatelessWidget {
       child: ElevatedButton(
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all<Color>(
-            customColors ?? AppColors.blue,
+            customColors ?? AppColors.colorPrimary,
           ),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(

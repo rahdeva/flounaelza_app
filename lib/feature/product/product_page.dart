@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '/feature/my_employee/my_employee_controller.dart';
+import 'product_controller.dart';
 
-class MyEmployeePage extends StatelessWidget {
-  const MyEmployeePage({super.key});
+class ProductPage extends StatelessWidget {
+  const ProductPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<MyEmployeeController>(
+    return GetBuilder<ProductController>(
       builder: (controller) {
         return Scaffold(
             body: SingleChildScrollView(

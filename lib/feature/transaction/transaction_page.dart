@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '/feature/home/home_controller.dart';
+import 'transaction_controller.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class TransactionPage extends StatelessWidget {
+  const TransactionPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<HomeController>(
+    return GetBuilder<TransactionController>(
       builder: (controller) {
         return Scaffold(
             body: SingleChildScrollView(

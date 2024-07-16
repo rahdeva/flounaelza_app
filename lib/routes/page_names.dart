@@ -4,8 +4,9 @@ class PageName {
   static const LOADER = "/loader";
   static const LOGIN = "/login";
   static const NAVTAB = "/nav-tab";
-  static const HOME = "/home";
-  static const MY_EMPLOYEE = "/my-employee";
-  static const NOTIFICATION = "/notification"; 
+  static const PRODUCT = "/product";
+  static const TRANSACTION = "/transaction";
+  static const ACTION = "/action"; 
+  static const HISTORY = "/history";
   static const PROFILE = "/profile";
 }

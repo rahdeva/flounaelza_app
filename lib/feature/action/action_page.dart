@@ -1,13 +1,13 @@
-import 'package:flounaelza_app/feature/profile/profile_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'action_controller.dart';
 
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
+class ActionPage extends StatelessWidget {
+  const ActionPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<ProfileController>(
+    return GetBuilder<ActionController>(
       builder: (controller) {
         return Scaffold(
             body: SingleChildScrollView(
@@ -29,4 +29,3 @@ class ProfilePage extends StatelessWidget {
     );
   }
 }
-

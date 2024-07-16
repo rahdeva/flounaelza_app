@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '/feature/notification/notification_controller.dart';
+import 'history_controller.dart';
 
-class NotificationPage extends StatelessWidget {
-  const NotificationPage({super.key});
+class HistoryPage extends StatelessWidget {
+  const HistoryPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<NotificationController>(
+    return GetBuilder<HistoryController>(
       builder: (controller) {
         return Scaffold(
             body: SingleChildScrollView(

@@ -69,8 +69,8 @@ class SMBottomNavBarItem extends StatelessWidget {
                                               1.0
                                             ],
                                             colors: <Color>[
-                                              AppColors.blue,
-                                              AppColors.blue
+                                              AppColors.colorPrimary,
+                                              AppColors.colorPrimary
                                             ]),
                                         borderRadius: BorderRadius.only(
                                             topLeft: rad,
@@ -100,7 +100,7 @@ class SMBottomNavBarItem extends StatelessWidget {
                 Text(label,
                     style: TextStyle(
                         color: (currentIndex == index
-                            ? AppColors.blue
+                            ? AppColors.colorPrimary
                             : AppColors.gray500),
                         fontSize: 11,
                         fontWeight: FontWeight.normal)),

@@ -1,8 +1,10 @@
-import 'package:get/get.dart';
-import 'package:flounaelza_app/feature/home/home_page.dart';
-import 'package:flounaelza_app/feature/my_employee/my_employee_page.dart';
-import 'package:flounaelza_app/feature/notification/notification_page.dart';
+import 'package:flounaelza_app/feature/profile/profile_binding.dart';
 import 'package:flounaelza_app/feature/profile/profile_page.dart';
+import 'package:get/get.dart';
+import 'package:flounaelza_app/feature/product/product_page.dart';
+import 'package:flounaelza_app/feature/transaction/transaction_page.dart';
+import 'package:flounaelza_app/feature/action/action_page.dart';
+import 'package:flounaelza_app/feature/history/history_page.dart';
 import '/feature/bottom_nav_bar/nav_tab_binding.dart';
 import '/feature/bottom_nav_bar/nav_tab_page.dart';
 import '/feature/loader/loading_page.dart';
@@ -28,20 +30,25 @@ class PageRoutes {
       binding: NavTabBinding()
     ),
     GetPage(
-      name: PageName.HOME,
-      page: () => const HomePage(),
+      name: PageName.PRODUCT,
+      page: () => const ProductPage(),
     ),
     GetPage(
-      name: PageName.MY_EMPLOYEE,
-      page: () => const MyEmployeePage(),
+      name: PageName.TRANSACTION,
+      page: () => const TransactionPage(),
     ),
     GetPage(
-      name: PageName.NOTIFICATION,
-      page: () => const NotificationPage(),
+      name: PageName.ACTION,
+      page: () => const ActionPage(),
+    ),
+    GetPage(
+      name: PageName.HISTORY,
+      page: () => const HistoryPage(),
     ),
     GetPage(
       name: PageName.PROFILE,
       page: () => const ProfilePage(),
+      binding: ProfileBinding()
     ),
   ];
 }

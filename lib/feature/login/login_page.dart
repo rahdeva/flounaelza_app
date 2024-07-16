@@ -29,7 +29,7 @@ class LoginPage extends StatelessWidget {
                       Text(
                         "JAMKRIDA\nDIGITAL INFORMATION",
                         style: Theme.of(context).textTheme.displayMedium!.copyWith(
-                          color: AppColors.blue,
+                          color: AppColors.colorPrimary,
                           fontWeight: FontWeight.w700
                         ),
                         textAlign: TextAlign.center,
@@ -76,11 +76,11 @@ class LoginPage extends StatelessWidget {
                         icon: controller.isObscure
                           ? const Icon(
                               Icons.visibility_outlined,
-                              color: AppColors.blue,
+                              color: AppColors.colorPrimary,
                             )
                           : const Icon(
                               Icons.visibility_off_outlined,
-                              color: AppColors.blue,
+                              color: AppColors.colorPrimary,
                             ),
                       ),
                     ),

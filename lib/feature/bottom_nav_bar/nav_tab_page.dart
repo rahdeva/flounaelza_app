@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flounaelza_app/feature/bottom_nav_bar/widgets/sm_bottom_navbar_item.dart';
-import 'package:flounaelza_app/feature/my_employee/my_employee_page.dart';
-import 'package:flounaelza_app/feature/notification/notification_page.dart';
+import 'package:flounaelza_app/feature/transaction/transaction_page.dart';
+import 'package:flounaelza_app/feature/action/action_page.dart';
 import 'package:flounaelza_app/resources/resources.dart';
-import '/feature/home/home_page.dart';
-import '/feature/profile/profile_page.dart';
+import '../product/product_page.dart';
+import '../history/history_page.dart';
 
 import 'nav_tab_controller.dart';
 
@@ -21,10 +21,10 @@ class NavTabPage extends StatelessWidget {
             child: IndexedStack(
               index: controller.tabIndex,
               children: const [
-                HomePage(),
-                MyEmployeePage(),
-                NotificationPage(),
-                ProfilePage(),
+                ProductPage(),
+                TransactionPage(),
+                ActionPage(),
+                HistoryPage(),
               ],
             ),
           ),
