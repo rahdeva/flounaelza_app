@@ -17,7 +17,7 @@ class HistoryPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 16, top: 24),
                 child: Text(
-                  "txt_home_attendance_status ".tr,
+                  "History",
                   textAlign: TextAlign.left,
                   style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
                 ),
