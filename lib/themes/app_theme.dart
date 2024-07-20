@@ -138,59 +138,59 @@ class AppTheme {
       filled: true,
       fillColor: Colors.grey[50],
       contentPadding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-      suffixIconColor: AppColors.colorPrimary,
-      prefixIconColor: AppColors.colorPrimary,
+      suffixIconColor: AppColors.colorSecondary,
+      prefixIconColor: AppColors.colorSecondary,
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(4),
+        borderRadius: BorderRadius.circular(8),
         borderSide: const BorderSide(
-          color: AppColors.colorPrimary, 
+          color: AppColors.colorSecondary, 
           width: 1
         ),
       ),
       enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(4),
+        borderRadius: BorderRadius.circular(8),
         borderSide: const BorderSide(
-          color: AppColors.colorPrimary, 
+          color: AppColors.colorSecondary, 
           width: 1
         )
       ),
       disabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(4),
+        borderRadius: BorderRadius.circular(8),
         borderSide: const BorderSide(
-          color: AppColors.colorPrimary, 
+          color: AppColors.colorSecondary, 
           width: 1
         )
       ),
       errorBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(4),
+        borderRadius: BorderRadius.circular(8),
         borderSide: BorderSide(
-          color: AppColors.red.withOpacity(0.8), 
+          color: AppColors.danger.withOpacity(0.8), 
           width: 1
         ),
       ),
       focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(4),
+        borderRadius: BorderRadius.circular(8),
         borderSide: const BorderSide(
-          color: AppColors.colorPrimary, 
+          color: AppColors.colorSecondary, 
           width: 2
         )
       ),
       focusedErrorBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(4),
+        borderRadius: BorderRadius.circular(8),
         borderSide: const BorderSide(
-          color: AppColors.red, 
+          color: AppColors.danger, 
           width: 1.5
         ),
       ),
       labelStyle: Theme.of(context).textTheme.bodyLarge!.copyWith(
-        color: AppColors.colorPrimary,
+        color: AppColors.colorSecondary,
         fontWeight: FontWeight.w600
       ),
       hintStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
         color: AppColors.gray500
       ),
       errorStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
-        color: AppColors.red
+        color: AppColors.danger
       ),
     );
   }

@@ -58,6 +58,10 @@ class $LibResourcesImagesGen {
   AssetGenImage get imgError =>
       const AssetGenImage('lib/resources/images/img_error.png');
 
+  /// File path: lib/resources/images/img_logo_login.png
+  AssetGenImage get imgLogoLogin =>
+      const AssetGenImage('lib/resources/images/img_logo_login.png');
+
   /// File path: lib/resources/images/img_logo_transparent.png
   AssetGenImage get imgLogoTransparent =>
       const AssetGenImage('lib/resources/images/img_logo_transparent.png');
@@ -76,6 +80,7 @@ class $LibResourcesImagesGen {
         imgEditionWhite,
         imgEmpty,
         imgError,
+        imgLogoLogin,
         imgLogoTransparent,
         userPlaceholder
       ];
