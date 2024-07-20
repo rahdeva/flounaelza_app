@@ -43,42 +43,42 @@ class NavTabPage extends StatelessWidget {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  SMBottomNavBarItem(
-                    imageDeactive: AppImages.icHomeUnactive.image(),
-                    imageActive: AppImages.icHomeActive.image(),
-                    currentIndex: controller.tabIndex,
-                    onTap: controller.changeTabIndex,
-                    label: 'txt_menu_home'.tr,
-                    index: 0,
-                  ),
-                  SMBottomNavBarItem(
-                    imageDeactive: AppImages.icActivityUnactive.image(),
-                    imageActive: AppImages.icActivityActive.image(),
-                    currentIndex: controller.tabIndex,
-                    onTap: (value) {
-                      controller.changeTabIndex(value);
-                    },
-                    label: 'txt_menu_my_activity'.tr,
-                    index: 1,
-                  ),
-                  SMBottomNavBarItem(
-                    imageDeactive: AppImages.icNotifUnactive.image(),
-                    imageActive: AppImages.icNotifActive.image(),
-                    currentIndex: controller.tabIndex,
-                    onTap: controller.changeTabIndex,
-                    label: 'txt_menu_notification'.tr,
-                    index: 2,
-                  ),
-                  SMBottomNavBarItem(
-                    imageDeactive: AppImages.icProfileUnactive.image(),
-                    imageActive: AppImages.icProfileActive.image(),
-                    currentIndex: controller.tabIndex,
-                    onTap: (value) {
-                      controller.changeTabIndex(value);
-                    },
-                    label: 'txt_menu_profile'.tr,
-                    index: 3,
-                  ),
+                  // SMBottomNavBarItem(
+                  //   imageDeactive: AppImages.icHomeUnactive.image(),
+                  //   imageActive: AppImages.icHomeActive.image(),
+                  //   currentIndex: controller.tabIndex,
+                  //   onTap: controller.changeTabIndex,
+                  //   label: 'txt_menu_home'.tr,
+                  //   index: 0,
+                  // ),
+                  // SMBottomNavBarItem(
+                  //   imageDeactive: AppImages.icActivityUnactive.image(),
+                  //   imageActive: AppImages.icActivityActive.image(),
+                  //   currentIndex: controller.tabIndex,
+                  //   onTap: (value) {
+                  //     controller.changeTabIndex(value);
+                  //   },
+                  //   label: 'txt_menu_my_activity'.tr,
+                  //   index: 1,
+                  // ),
+                  // SMBottomNavBarItem(
+                  //   imageDeactive: AppImages.icNotifUnactive.image(),
+                  //   imageActive: AppImages.icNotifActive.image(),
+                  //   currentIndex: controller.tabIndex,
+                  //   onTap: controller.changeTabIndex,
+                  //   label: 'txt_menu_notification'.tr,
+                  //   index: 2,
+                  // ),
+                  // SMBottomNavBarItem(
+                  //   imageDeactive: AppImages.icProfileUnactive.image(),
+                  //   imageActive: AppImages.icProfileActive.image(),
+                  //   currentIndex: controller.tabIndex,
+                  //   onTap: (value) {
+                  //     controller.changeTabIndex(value);
+                  //   },
+                  //   label: 'txt_menu_profile'.tr,
+                  //   index: 3,
+                  // ),
                 ],
               ),
             )

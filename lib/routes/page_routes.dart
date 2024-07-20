@@ -1,5 +1,6 @@
 import 'package:flounaelza_app/feature/profile/profile_binding.dart';
 import 'package:flounaelza_app/feature/profile/profile_page.dart';
+import 'package:flounaelza_app/feature/splash/splash_screen.dart';
 import 'package:get/get.dart';
 import 'package:flounaelza_app/feature/product/product_page.dart';
 import 'package:flounaelza_app/feature/transaction/transaction_page.dart';
@@ -15,6 +16,10 @@ import 'page_names.dart';
 
 class PageRoutes {
   static final pages = [
+    GetPage(
+      name: PageName.SPLASH,
+      page: () => const SplashScreen(),
+    ),
     GetPage(
       name: PageName.LOADER,
       page: () => const LoadingPage(),
