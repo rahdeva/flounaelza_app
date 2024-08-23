@@ -12,7 +12,7 @@ import '/utills/widget/snackbar/snackbar_widget.dart';
 
 class APILogInterceptor extends InterceptorsWrapper {
   @override
-  void onError(DioError err, ErrorInterceptorHandler handler) {
+  void onError(DioException err, ErrorInterceptorHandler handler) {
     debugPrint('');
     debugPrint('# ERROR');
     debugPrint('<-- ${err.response?.statusCode} - ${err.requestOptions.uri}');
@@ -86,7 +86,7 @@ class APILogInterceptor extends InterceptorsWrapper {
         token: loginResponse.data!.accessToken ?? '',
       );
       AuthController.find.setAuth();
-    } on DioError catch (error) {
+    } on DioException catch (error) {
       debugPrint(error.toString());
       await AuthController.find.signOut();
     }

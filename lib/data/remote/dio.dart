@@ -7,8 +7,8 @@ import 'log_interceptor.dart';
 class AppDio {
   Future<Dio> getDIO({
     Map<String, dynamic> headers = const {},
-    int connectTimeout = 30000,
-    int receiveTimeout = 30000,
+    Duration connectTimeout = const Duration(seconds: 5),
+    Duration receiveTimeout = const Duration(seconds: 3),
   }) async {
     final _headers = Map<String, dynamic>.from(headers);
     final token = await SecureStorageManager().getToken() ?? "";
@@ -24,14 +24,8 @@ class AppDio {
     );
 
     final defaultHeaders = Map<String, dynamic>();
-
-    // override headers if needed
     defaultHeaders.addAll(headers);
-
-    // apply new headers
     dio.options.headers.addAll(_headers);
-
-    //dio.interceptors.add(LogInterceptor(responseBody: true));
     dio.interceptors.add(APILogInterceptor());
     
     return dio;
@@ -39,8 +33,8 @@ class AppDio {
 
   Future<Dio> getDIOFile({
     Map<String, dynamic> headers = const {},
-    int connectTimeout = 30000,
-    int receiveTimeout = 30000,
+    Duration connectTimeout = const Duration(seconds: 5),
+    Duration receiveTimeout = const Duration(seconds: 3),
   }) async {
     final _headers = Map<String, dynamic>.from(headers);
     final token = await SecureStorageManager().getToken() ?? "";
@@ -56,47 +50,8 @@ class AppDio {
     );
 
     final defaultHeaders = Map<String, dynamic>();
-
-    // override headers if needed
     defaultHeaders.addAll(headers);
-
-    // apply new headers
     dio.options.headers.addAll(_headers);
-
-    //dio.interceptors.add(LogInterceptor(responseBody: true));
-    dio.interceptors.add(APILogInterceptor());
-    
-    return dio;
-  }
-
-  Future<Dio> getDIODownload({
-    Map<String, dynamic> headers = const {},
-    int connectTimeout = 30000,
-    int receiveTimeout = 30000,
-  }) async {
-    final _headers = Map<String, dynamic>.from(headers);
-    final token = await SecureStorageManager().getToken() ?? "";
-    if (!_headers.containsKey("Authorization") && token.isNotEmpty) {
-      _headers["Authorization"] = "Bearer $token";
-    }
-    var dio = Dio(
-      BaseOptions(
-        responseType: ResponseType.bytes,
-        followRedirects: false,
-        connectTimeout: connectTimeout,
-        receiveTimeout: receiveTimeout,
-      )
-    );
-
-    final defaultHeaders = Map<String, dynamic>();
-
-    // override headers if needed
-    defaultHeaders.addAll(headers);
-
-    // apply new headers
-    dio.options.headers.addAll(_headers);
-
-    //dio.interceptors.add(LogInterceptor(responseBody: true));
     dio.interceptors.add(APILogInterceptor());
     
     return dio;

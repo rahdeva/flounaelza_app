@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:flounaelza_app/feature/bottom_nav_bar/widgets/sm_bottom_navbar_item.dart';
 import 'package:flounaelza_app/feature/transaction/transaction_page.dart';
 import 'package:flounaelza_app/feature/action/action_page.dart';
-import 'package:flounaelza_app/resources/resources.dart';
 import '../product/product_page.dart';
 import '../history/history_page.dart';
 
-import 'nav_tab_controller.dart';
+import 'main_controller.dart';
 
 class NavTabPage extends StatelessWidget {
   const NavTabPage({super.key});

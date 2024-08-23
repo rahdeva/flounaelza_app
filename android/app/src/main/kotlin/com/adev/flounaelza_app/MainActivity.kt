@@ -1,4 +1,4 @@
-package com.example.flounaelza_app
+package com.adev.flounaelza_app
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -8,6 +8,7 @@ import 'routes/page_routes.dart';
 import 'themes/app_theme.dart';
 import 'utills/localization/app_translation.dart';
 import 'utills/localization/locale_helper.dart';
+// import 'package:device_preview/device_preview.dart';
 
 void main() async {
   if (kDebugMode) {
@@ -20,6 +21,13 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Initializer.init();
 
+  // runApp(
+  //   DevicePreview(
+  //     enabled: !kReleaseMode,
+  //     builder: (context) => const MyApp(), // Wrap your app
+  //   ),
+  // );
+
   runApp(const MyApp());
 }
 
@@ -28,7 +36,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Sizer(builder: (context, orientation, deviceType) {
+    return ResponsiveSizer(builder: (context, orientation, deviceType) {
       return GetMaterialApp(
         debugShowCheckedModeBanner: false,
         translations: AppTranslation(),
@@ -39,7 +47,7 @@ class MyApp extends StatelessWidget {
         theme: AppTheme.buildThemeData(false, context),
         builder: (BuildContext context, child) {
           return MediaQuery(
-            data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+            data: MediaQuery.of(context).copyWith(textScaler: const TextScaler.linear(1.0)),
             child: child ?? Container(),
           );
         },

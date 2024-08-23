@@ -11,21 +11,13 @@ class Initializer {
       _initScreenPreference();
       await GetStorage.init(StorageName.STORAGE_NAME);
       await Get.putAsync<FlutterSecureStorage>(() async {
-        return FlutterSecureStorage();
+        return const FlutterSecureStorage();
       });
       Get.put<AuthController>(AuthController());
     } catch (err) {
       rethrow;
     }
   }
-
-  // static Future<void> initHive() async {
-  //   Directory dir = await getApplicationDocumentsDirectory();
-  //   await Hive.initFlutter(dir.path);
-  //   // HiveAdapters().registerAdapter();
-  //   // await Hive.openBox<User>(HiveConstants.USERS_BOX);
-  //   // await Hive.openBox<Place>(HiveConstants.PLACES);
-  // }
 
   static void _initScreenPreference() {
     SystemChrome.setPreferredOrientations([

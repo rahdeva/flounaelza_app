@@ -8,29 +8,15 @@ import '/model/login_response.dart';
 import '/resources/resources.dart';
 import '/utills/widget/snackbar/snackbar_widget.dart';
 import 'package:permission_handler/permission_handler.dart';
-import '/data/local/storage/storage_constants.dart';
-import '/data/remote/base/base_controller.dart';
 import '/feature/auth/auth_controller.dart';
-import '/model/user.dart';
+import 'package:get/get.dart';
 
-class LoginController extends BaseController<User> {
+class LoginController extends GetxController {
   final AuthController authController = AuthController.find;
   final GlobalKey<FormBuilderState> formKey = GlobalKey<FormBuilderState>();
   final GlobalKey<FormBuilderState> forgotFormKey = GlobalKey<FormBuilderState>();
 
   bool isObscure = true;
-
-  @override
-  void loadNextPage() {}
-
-  @override
-  void refreshPage() {}
-
-  @override
-  get statusData => dataObj;
-
-  @override
-  String get storageName => StorageName.USERS;
 
   @override
   Future<void> onReady() async {
@@ -44,8 +30,8 @@ class LoginController extends BaseController<User> {
   ) async {
     final Dio dio = Dio(
       BaseOptions(
-        connectTimeout: 30000,
-        receiveTimeout: 30000,
+        connectTimeout: const Duration(seconds: 5),
+        receiveTimeout: const Duration(seconds: 3),
         headers: {
           "Content-Type": 'application/json',
           // "sugoiiyabai": "k/WUgI/f6vxwpeu9SKdm5ddijsqA7nmkraedjUoLvN7BBVN8PIVul1sVV2Jhpj+5"
@@ -70,7 +56,7 @@ class LoginController extends BaseController<User> {
         token: loginResponse.data!.accessToken ?? '',
       );
       authController.setAuth();
-    } on DioError catch (error) {
+    } on DioException catch (error) {
       SnackbarWidget.defaultSnackbar(
         icon: const Icon(
           Icons.cancel,
